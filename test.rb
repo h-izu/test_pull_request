@@ -9,6 +9,7 @@ req = Net::HTTP::Get.new("#{url.path}?#{url.query}")
 res = Net::HTTP.start(url.host, url.port) {|http|
   #add indent
   http.request(req)
+  #add comment2
 }
 
 parsed = JSON.parse(res.body)
