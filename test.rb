@@ -14,8 +14,5 @@ res = Net::HTTP.start(url.host, url.port) {|http|
 
 parsed = JSON.parse(res.body)
 
-p parsed
-p parsed["weather"]
-
 p "現在の東京の天気"
 p parsed["weather"].first["main"]
