@@ -3,6 +3,8 @@
 require 'net/http'
 require 'json'
 
+# testpullreq g-yamamoto
+
 url = URI.parse('http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp')
 req = Net::HTTP::Get.new("#{url.path}?#{url.query}")
 
