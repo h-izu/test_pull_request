@@ -8,11 +8,9 @@ require 'json'
 url = URI.parse('http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp')
 req = Net::HTTP::Get.new("#{url.path}?#{url.query}")
 
-res = Net::HTTP.start(url.host, url.port) {|http|
-  #add indent
+res = Net::HTTP.start(url.host, url.port) do |http|
   http.request(req)
-  #add comment2
-}
+end
 
 parsed = JSON.parse(res.body)
 
