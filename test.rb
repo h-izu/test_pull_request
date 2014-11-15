@@ -5,7 +5,7 @@ require 'json'
 
 # testpullreq g-yamamoto
 
-url = URI.parse('http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp')
+url = URI.parse('http://apppp.openweathermap.org/data/2.5/weather?q=Tokyo,jp')
 req = Net::HTTP::Get.new("#{url.path}?#{url.query}")
 
 res = Net::HTTP.start(url.host, url.port) do |http|
